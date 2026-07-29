@@ -24,7 +24,196 @@
       padding: 2rem 1rem;
     }
 
+    header h1 {<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santuário da Natureza</title>
+  <style>
+    /* Estilos Gerais para garantir que o rodapé fique no final */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f9f4;
+      color: #2b2b2b;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column; /* Organiza em coluna (topo -> meio -> rodapé) */
+    }
+
+    /* BANNER DE DICAS NO TOPO */
+    .banner-dicas {
+      background-color: #0d3b2e;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .btn-dica {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-dica:hover {
+      background-color: #3cb371;
+    }
+
+    .painel-dicas {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      background-color: #ffffff;
+      color: #013220;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .conteudo-dicas {
+      padding: 15px 25px;
+    }
+
+    .conteudo-dicas ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .conteudo-dicas li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    /* CABEÇALHO DO SITE */
+    header {
+      background-color: #1b4d3e;
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
     header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* CONTEÚDO PRINCIPAL (Faz empurrar o rodapé para baixo) */
+    main {
+      flex: 1; /* Ocupa todo o espaço disponível verticalmente */
+      max-width: 800px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #006400;
+      margin-top: 0;
+    }
+
+    .texto-destaque {
+      font-size: 1.2rem;
+      color: #013220;
+      font-weight: 500;
+    }
+
+    /* RODAPÉ (Sempre na parte inferior) */
+    footer {
+      background-color: #1b4d3e;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner-dicas">
+    <button class="btn-dica" onclick="alternarDicas()">💡 Dica para a Natureza</button>
+    
+    <div id="painelDicas" class="painel-dicas">
+      <div class="conteudo-dicas">
+        <ul>
+          <li>🌱 <strong>Pense no consumo de plástico:</strong> Substitua sacolas plásticas por sacolas retornáveis (ecobags) e evite garrafas ou copos descartáveis.</li>
+          <li>💧 <strong>Economize água e energia:</strong> Feche a torneira ao escovar os dentes, reduza o tempo no banho e apague as luzes de cômodos vazios.</li>
+          <li>♻️ <strong>Separe o lixo:</strong> Separe os resíduos orgânicos dos materiais recicláveis (papel, plástico, vidro e metal) antes de descartar.</li>
+          <li>🪴 <strong>Plante algo:</strong> Ter plantas em casa, plantar uma árvore ou cultivar uma pequena horta de temperos ajuda o ecossistema local e melhora o ar da sua casa.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <h1>Santuário da Natureza</h1>
+    <p>Explorando e preservando o nosso planeta</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>A Importância da Preservação</h2>
+      <p class="texto-destaque">
+        A natureza nos fornece tudo o que precisamos para viver: ar puro, água limpa, alimentos e abrigo. Proteger o meio ambiente é garantir o futuro das próximas gerações.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Pequenas Ações, Grandes Impactos</h2>
+      <p>Você pode ajudar a cuidar do planeta no dia a dia através de hábitos simples:</p>
+      <ul>
+        <li>Reduzir o uso de plásticos descartáveis.</li>
+        <li>Economizar água e energia elétrica.</li>
+        <li>Plantar árvores e cuidar da vegetação local.</li>
+        <li>Praticar a reciclagem do lixo doméstico.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Santuário da Natureza — Preservar é Viver.</p>
+  </footer>
+
+  <script>
+    function alternarDicas() {
+      var painel = document.getElementById("painelDicas");
+      if (painel.style.maxHeight) {
+        painel.style.maxHeight = null;
+      } else {
+        painel.style.maxHeight = painel.scrollHeight + "px";
+      }
+    }
+  </script>
+
+</body>
+</html>
       margin: 0;
       font-size: 2.5rem;
     }
@@ -266,4 +455,193 @@
 </body>
 <body>:
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santuário da Natureza</title>
+  <style>
+    /* Estilos Gerais para garantir que o rodapé fique no final */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f9f4;
+      color: #2b2b2b;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column; /* Organiza em coluna (topo -> meio -> rodapé) */
+    }
+
+    /* BANNER DE DICAS NO TOPO */
+    .banner-dicas {
+      background-color: #0d3b2e;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .btn-dica {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-dica:hover {
+      background-color: #3cb371;
+    }
+
+    .painel-dicas {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      background-color: #ffffff;
+      color: #013220;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .conteudo-dicas {
+      padding: 15px 25px;
+    }
+
+    .conteudo-dicas ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .conteudo-dicas li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    /* CABEÇALHO DO SITE */
+    header {
+      background-color: #1b4d3e;
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* CONTEÚDO PRINCIPAL (Faz empurrar o rodapé para baixo) */
+    main {
+      flex: 1; /* Ocupa todo o espaço disponível verticalmente */
+      max-width: 800px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #006400;
+      margin-top: 0;
+    }
+
+    .texto-destaque {
+      font-size: 1.2rem;
+      color: #013220;
+      font-weight: 500;
+    }
+
+    /* RODAPÉ (Sempre na parte inferior) */
+    footer {
+      background-color: #1b4d3e;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner-dicas">
+    <button class="btn-dica" onclick="alternarDicas()">💡 Dica para a Natureza</button>
     
+    <div id="painelDicas" class="painel-dicas">
+      <div class="conteudo-dicas">
+        <ul>
+          <li>🌱 <strong>Pense no consumo de plástico:</strong> Substitua sacolas plásticas por sacolas retornáveis (ecobags) e evite garrafas ou copos descartáveis.</li>
+          <li>💧 <strong>Economize água e energia:</strong> Feche a torneira ao escovar os dentes, reduza o tempo no banho e apague as luzes de cômodos vazios.</li>
+          <li>♻️ <strong>Separe o lixo:</strong> Separe os resíduos orgânicos dos materiais recicláveis (papel, plástico, vidro e metal) antes de descartar.</li>
+          <li>🪴 <strong>Plante algo:</strong> Ter plantas em casa, plantar uma árvore ou cultivar uma pequena horta de temperos ajuda o ecossistema local e melhora o ar da sua casa.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <h1>Santuário da Natureza</h1>
+    <p>Explorando e preservando o nosso planeta</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>A Importância da Preservação</h2>
+      <p class="texto-destaque">
+        A natureza nos fornece tudo o que precisamos para viver: ar puro, água limpa, alimentos e abrigo. Proteger o meio ambiente é garantir o futuro das próximas gerações.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Pequenas Ações, Grandes Impactos</h2>
+      <p>Você pode ajudar a cuidar do planeta no dia a dia através de hábitos simples:</p>
+      <ul>
+        <li>Reduzir o uso de plásticos descartáveis.</li>
+        <li>Economizar água e energia elétrica.</li>
+        <li>Plantar árvores e cuidar da vegetação local.</li>
+        <li>Praticar a reciclagem do lixo doméstico.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Santuário da Natureza — Preservar é Viver.</p>
+  </footer>
+
+  <script>
+    function alternarDicas() {
+      var painel = document.getElementById("painelDicas");
+      if (painel.style.maxHeight) {
+        painel.style.maxHeight = null;
+      } else {
+        painel.style.maxHeight = painel.scrollHeight + "px";
+      }
+    }
+  </script>
+
+</body>
+</html>
